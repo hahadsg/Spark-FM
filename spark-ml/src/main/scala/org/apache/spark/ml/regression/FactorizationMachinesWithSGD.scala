@@ -221,6 +221,7 @@ class FactorizationMachinesWithSGD (
       .setNumIterations($(maxIter))
       .setRegParam($(regParam))
       .setMiniBatchFraction($(miniBatchFraction))
+      .setConvergenceTol($(tol))
     val coefficients = optimizer.optimize(data, initialCoefficients)
 
     if (handlePersistence) instances.unpersist()
